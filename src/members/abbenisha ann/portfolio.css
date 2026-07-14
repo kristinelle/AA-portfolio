@@ -1,6 +1,4 @@
-/* Styles for Abbenisha's portfolio section.
-   Classes are prefixed `aa-` so they never collide with other members' CSS.
-   All colours come from the shared tokens in src/index.css. */
+/* Portfolio section styles */
 
 .aa-portfolio {
   text-align: left;
@@ -178,7 +176,6 @@
   padding: 0;
 }
 
-/* Timeline with a marker dot on the rail. */
 .aa-timeline-item {
   position: relative;
   padding-left: 24px;
@@ -343,7 +340,6 @@
   transform: scale(1.08);
 }
 
-/* Gradient veil so the card body reads cleanly against any thumbnail. */
 .aa-card-overlay {
   position: absolute;
   inset: 0;
@@ -464,7 +460,6 @@
   color: #2a0d1c;
 }
 
-/* Title sits over the bottom of the cover image. */
 .aa-modal-hero-wrap {
   position: relative;
 }

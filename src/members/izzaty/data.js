@@ -1,5 +1,4 @@
-// Content for Izzaty Balqis's portfolio section.
-// Every section (About, Skills, Projects, Contact) renders from this file.
+// Portfolio content data source
 
 export const profile = {
   name: 'Izzaty Balqis Binti Suhaimi',

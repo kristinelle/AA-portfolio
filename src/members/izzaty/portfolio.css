@@ -1,6 +1,4 @@
-/* Styles for Izzaty Balqis's portfolio section.
-   Classes are prefixed `ib-` to avoid style conflicts with other members' CSS.
-   We use CSS variables and tokens from src/index.css, customized for a modern dark/cyan/purple theme. */
+/* Portfolio section styles */
 
 .ib-portfolio {
   text-align: left;
@@ -28,7 +26,7 @@
   font-weight: 700;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #06b6d4; /* vibrant cyan */
+  color: #06b6d4;
   padding: 8px 20px;
   border-radius: 999px;
   background: rgba(6, 182, 212, 0.08);

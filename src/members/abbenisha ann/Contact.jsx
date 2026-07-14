@@ -27,8 +27,7 @@ export default function Contact() {
     return found
   }
 
-  // No backend is available, so a valid submission hands the message to the
-  // visitor's mail client, pre-addressed and pre-filled.
+    // Open mail client with prefilled body
   const handleSubmit = (e) => {
     e.preventDefault()
 

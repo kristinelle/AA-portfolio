@@ -1,7 +1,4 @@
-/* Hanani's portfolio section.
-   Everything is scoped under .portfolio-hanani so these class names never
-   collide with a teammate's portfolio.css (they're plain global CSS files,
-   not CSS modules). Colours/fonts reuse the site-wide tokens from index.css. */
+/* Portfolio section styles */
 
 .portfolio-hanani {
   text-align: left;
@@ -14,8 +11,7 @@
   margin-bottom: 88px;
 }
 
-/* Signature element: a hand-drawn-feeling brush stroke under section
-   headings — a nod to the freelance illustration background. */
+/* Section heading underline */
 .portfolio-hanani .hnn-heading {
   position: relative;
   display: inline-block;
@@ -98,8 +94,7 @@
   padding-left: 18px;
 }
 
-/* Skills — CSS 3D flip cards (perspective transform) so they read as
-   "animated 3D elements" rather than flat badges. */
+/* 3D card flip animation for skills */
 .portfolio-hanani .hnn-skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

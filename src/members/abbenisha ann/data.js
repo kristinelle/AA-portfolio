@@ -1,5 +1,4 @@
-// All content for Abbenisha's portfolio section.
-// Every section (About, Skills, Projects, Contact) renders from this file.
+// Portfolio content data source
 
 export const profile = {
   name: 'Abbenisha Ann Michael Benedict',
@@ -71,13 +70,7 @@ export const skillGroups = [
   },
 ]
 
-// Media paths are relative to this folder. A file that does not exist yet is
-// drawn as a styled placeholder instead of breaking the page.
-//
-// `contributions`, `challenges` and `lessons` are yours to fill in — only you
-// know them. Each is a list of strings. While a list is empty the modal shows
-// the section heading with a short "to be added" note; add an entry and the
-// note is replaced by your bullets.
+// Project details and media assets
 export const projects = [
   {
     id: 'emomaze',

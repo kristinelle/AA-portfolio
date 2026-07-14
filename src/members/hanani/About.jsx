@@ -1,6 +1,6 @@
 import { profile } from './data.js'
 
-// Small reusable heading with the brush-stroke underline signature element.
+// Heading with custom underline
 function Heading({ children }) {
   return (
     <h2 className="hnn-heading">

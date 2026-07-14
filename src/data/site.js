@@ -1,14 +1,4 @@
-// Group-wide content for the landing page, navbar and routes.
-//
-// `teamMembers` is the single source of truth for the team. Adding or editing a
-// member here updates the About Us cards, the navbar links and the routes at
-// once — no component needs to change.
-//
-// Each member edits ONLY their own entry:
-//   name, role, programme, shortDescription  -> their card
-//   photo                                    -> src/assets/team/<file>
-//   ready: true                              -> once their Portfolio page is
-//                                               wired into src/App.jsx
+
 export const site = {
   groupName: 'MuskeFour',
   portfolioTitle: 'Interactive 3D Portfolio',

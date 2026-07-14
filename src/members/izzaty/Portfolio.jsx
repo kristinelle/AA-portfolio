@@ -30,7 +30,6 @@ function FloatingShapes() {
       <directionalLight position={[2, 5, 2]} intensity={2} color="#06b6d4" />
       <pointLight position={[-3, -3, 2]} intensity={1.5} color="#a855f7" />
 
-      {/* Floating abstract central shapes */}
       <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
         <mesh position={[-2, 0, 0]}>
           <dodecahedronGeometry args={[0.9, 0]} />
@@ -52,7 +51,6 @@ function FloatingShapes() {
         </mesh>
       </Float>
 
-      {/* Particle field */}
       <points ref={points}>
         <bufferGeometry>
           <bufferAttribute
@@ -72,7 +70,6 @@ export default function Portfolio() {
   return (
     <main className="ib-portfolio">
       <header className="ib-hero">
-        {/* Dynamic 3D backdrop inside Hero */}
         {is3DActive && (
           <div
             style={{
