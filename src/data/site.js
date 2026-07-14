@@ -54,12 +54,13 @@ export const teamMembers = [
   },
   {
     id: 'izzaty',
-    name: 'Izzaty',
-    role: 'Animation & Effects',
-    programme: 'Graphics & Multimedia Software',
-    shortDescription: 'Portfolio coming soon.',
+    name: 'Izzaty Balqis Binti Suhaimi',
+    role: 'Graphics & Multimedia Developer',
+    programme: 'Bachelor of Computer Science (Graphic and Multimedia Software) with Honours',
+    shortDescription:
+      'Computer Science student at UTM specializing in Graphics & Multimedia Software, with a passion for web platform development, visualization tools, and 3D experiences.',
     route: '/izzaty',
     photo: 'izzaty.jpg',
-    ready: false,
+    ready: true,
   },
 ]

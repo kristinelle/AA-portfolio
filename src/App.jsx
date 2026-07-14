@@ -6,6 +6,7 @@ import MemberPending from './components/MemberPending.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import { teamMembers } from './data/site.js'
 import Portfolio from './members/abbenisha ann/Portfolio.jsx'
+import IzzatyPortfolio from './members/izzaty/Portfolio.jsx'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/abbenisha" element={<Portfolio />} />
+        <Route path="/izzaty" element={<IzzatyPortfolio />} />
 
         {/* Every other member keeps a working route. Each one swaps this for
             their own <Route> when their portfolio is ready. */}
