@@ -4,10 +4,7 @@ import { Heading } from './About.jsx'
 
 export default function Contact() {
   const [status, setStatus] = useState('')
-
-  // Front-end only for now — this just confirms the form works.
-  // Wire this up to Formspree, EmailJS, or your own backend before
-  // final submission so messages actually get delivered.
+ 
   function handleSubmit(e) {
     e.preventDefault()
     setStatus("Thanks! I'll get back to you soon.")
