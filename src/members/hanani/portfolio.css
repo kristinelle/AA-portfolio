@@ -1,0 +1,318 @@
+/* Hanani's portfolio section.
+   Everything is scoped under .portfolio-hanani so these class names never
+   collide with a teammate's portfolio.css (they're plain global CSS files,
+   not CSS modules). Colours/fonts reuse the site-wide tokens from index.css. */
+
+.portfolio-hanani {
+  text-align: left;
+  padding: 64px 24px 96px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.portfolio-hanani section {
+  margin-bottom: 88px;
+}
+
+/* Signature element: a hand-drawn-feeling brush stroke under section
+   headings — a nod to the freelance illustration background. */
+.portfolio-hanani .hnn-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 28px;
+}
+
+.portfolio-hanani .hnn-heading svg {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 14px;
+  overflow: visible;
+}
+
+.portfolio-hanani .hnn-heading path {
+  stroke: var(--emerald-light);
+  stroke-width: 4;
+  fill: none;
+  stroke-linecap: round;
+}
+
+/* Hero */
+.portfolio-hanani .hnn-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 24px;
+}
+
+.portfolio-hanani .hnn-hero .hnn-role {
+  color: var(--emerald-light);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.portfolio-hanani .hnn-hero h1 {
+  margin: 0;
+  text-align: left;
+}
+
+.portfolio-hanani .hnn-tagline {
+  font-size: 19px;
+  color: var(--text);
+  max-width: 620px;
+}
+
+/* About */
+.portfolio-hanani .hnn-about-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+}
+
+.portfolio-hanani .hnn-card {
+  background: var(--glass);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.portfolio-hanani .hnn-card h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: var(--text-h);
+}
+
+.portfolio-hanani .hnn-card p,
+.portfolio-hanani .hnn-card li {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.portfolio-hanani .hnn-card ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* Skills — CSS 3D flip cards (perspective transform) so they read as
+   "animated 3D elements" rather than flat badges. */
+.portfolio-hanani .hnn-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.portfolio-hanani .hnn-skill {
+  perspective: 900px;
+  height: 130px;
+}
+
+.portfolio-hanani .hnn-skill-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.portfolio-hanani .hnn-skill:hover .hnn-skill-inner {
+  transform: rotateY(180deg);
+}
+
+.portfolio-hanani .hnn-skill-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: var(--radius);
+  border: 1px solid var(--accent-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+}
+
+.portfolio-hanani .hnn-skill-face.front {
+  background: var(--accent-bg);
+}
+
+.portfolio-hanani .hnn-skill-face.front span {
+  font-weight: 600;
+  color: var(--text-h);
+  font-size: 15px;
+}
+
+.portfolio-hanani .hnn-skill-face.back {
+  background: var(--glass-strong);
+  transform: rotateY(180deg);
+}
+
+.portfolio-hanani .hnn-skill-face.back p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Projects */
+.portfolio-hanani .hnn-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.portfolio-hanani .hnn-project {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+
+.portfolio-hanani .hnn-project:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--glow-emerald);
+  transform: translateY(-3px);
+}
+
+.portfolio-hanani .hnn-project h3 {
+  margin: 0 0 4px;
+  color: var(--text-h);
+  font-size: 18px;
+}
+
+.portfolio-hanani .hnn-project .hnn-project-tag {
+  color: var(--rose);
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.portfolio-hanani .hnn-project p {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, margin 0.35s ease;
+}
+
+.portfolio-hanani .hnn-project.open p {
+  max-height: 240px;
+  margin-top: 4px;
+}
+
+.portfolio-hanani .hnn-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.portfolio-hanani .hnn-tech-pill {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--code-bg);
+  color: var(--emerald-light);
+  border: 1px solid var(--accent-border);
+}
+
+/* Contact */
+.portfolio-hanani .hnn-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.portfolio-hanani .hnn-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.portfolio-hanani .hnn-social-links a {
+  color: var(--text-h);
+  background: var(--social-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.portfolio-hanani .hnn-social-links a:hover {
+  border-color: var(--accent-border);
+}
+
+.portfolio-hanani .hnn-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.portfolio-hanani .hnn-form input,
+.portfolio-hanani .hnn-form textarea {
+  font: inherit;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: var(--text-h);
+  resize: vertical;
+}
+
+.portfolio-hanani .hnn-form input:focus,
+.portfolio-hanani .hnn-form textarea:focus {
+  outline: 2px solid var(--emerald-light);
+  outline-offset: 2px;
+}
+
+.portfolio-hanani .hnn-form button {
+  align-self: flex-start;
+  font: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  border: none;
+  color: #05231a;
+  background: var(--gradient-accent);
+  cursor: pointer;
+  transition: filter 0.2s ease;
+}
+
+.portfolio-hanani .hnn-form button:hover {
+  filter: brightness(1.1);
+}
+
+.portfolio-hanani .hnn-form-status {
+  font-size: 13px;
+  color: var(--emerald-light);
+  min-height: 18px;
+}
+
+@media (max-width: 860px) {
+  .portfolio-hanani .hnn-about-grid,
+  .portfolio-hanani .hnn-projects-grid,
+  .portfolio-hanani .hnn-contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .portfolio-hanani .hnn-skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .portfolio-hanani .hnn-skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
