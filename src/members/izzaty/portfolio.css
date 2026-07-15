@@ -1,11 +1,25 @@
 /* Portfolio section styles */
 
 .ib-portfolio {
+  --purple-light: #E9D5FF;
+  --purple-muted: #C084FC;
+  --purple-soft: #D4A5FF;
+  --purple-primary: #A855F7;
+  --purple-dark: #7C3AED;
+  --bg-dark: #0b1120;
+
   text-align: left;
   padding: 0 24px 120px;
-  color: #e2e8f0;
-  background: radial-gradient(circle at 50% -20%, #1e1b4b 0%, #0f172a 70%);
+  color: var(--purple-light);
+  background: var(--bg-dark) !important;
+  background-image: none !important;
   min-height: 100vh;
+}
+
+body:has(.ib-portfolio),
+body:has(.ib-portfolio) #root {
+  background: #0b1120 !important;
+  background-image: none !important;
 }
 
 /* --- Hero Section --- */
@@ -26,12 +40,12 @@
   font-weight: 700;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #06b6d4;
+  color: var(--purple-muted);
   padding: 8px 20px;
   border-radius: 999px;
-  background: rgba(6, 182, 212, 0.08);
-  border: 1px solid rgba(6, 182, 212, 0.25);
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.15);
+  background: rgba(192, 132, 252, 0.08);
+  border: 1px solid rgba(192, 132, 252, 0.25);
+  box-shadow: 0 0 15px rgba(192, 132, 252, 0.15);
   margin-bottom: 24px;
 }
 
@@ -40,11 +54,11 @@
   font-weight: 800;
   letter-spacing: -2px;
   margin: 0 0 16px;
-  background: linear-gradient(135deg, #06b6d4 0%, #a855f7 100%);
+  background: linear-gradient(135deg, var(--purple-soft) 0%, var(--purple-muted) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  text-shadow: 0 0 40px rgba(6, 182, 212, 0.1);
+  text-shadow: 0 0 40px rgba(168, 85, 247, 0.15);
   text-transform: uppercase;
 }
 
@@ -53,7 +67,7 @@
   margin: 0 auto 24px;
   font-size: clamp(16px, 2.5vw, 22px);
   font-weight: 500;
-  color: #94a3b8;
+  color: var(--purple-muted);
 }
 
 .ib-hero-desc {
@@ -61,11 +75,12 @@
   margin: 0 auto 36px;
   font-size: 16px;
   line-height: 1.7;
-  color: #cbd5e1;
+  color: var(--purple-light);
 }
 
 .ib-hero-actions {
   display: flex;
+  align-items: center;
   gap: 16px;
   justify-content: center;
 }
@@ -84,7 +99,7 @@
   font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 12px;
-  background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, var(--purple-soft) 0%, var(--purple-muted) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -92,7 +107,8 @@
 
 .ib-section-sub {
   font-size: 16px;
-  color: #64748b;
+  color: var(--purple-light);
+  opacity: 0.8;
   margin-bottom: 40px;
 }
 
@@ -100,22 +116,22 @@
 .ib-panel {
   padding: 32px;
   border-radius: 16px;
-  background: rgba(15, 23, 42, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(20, 10, 30, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(16px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ib-panel:hover {
-  border-color: rgba(6, 182, 212, 0.3);
-  box-shadow: 0 15px 40px rgba(6, 182, 212, 0.08);
+  border-color: rgba(168, 85, 247, 0.3);
+  box-shadow: 0 15px 40px rgba(168, 85, 247, 0.1);
 }
 
 .ib-panel-title {
   font-size: 18px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--purple-soft);
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -161,24 +177,24 @@
 }
 
 .ib-btn-primary {
-  background: linear-gradient(135deg, #06b6d4 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, var(--purple-primary) 0%, var(--purple-dark) 100%);
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.35);
+  box-shadow: 0 4px 15px rgba(168, 85, 247, 0.35);
 }
 
 .ib-btn-primary:hover {
-  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.5);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.5);
 }
 
 .ib-btn-ghost {
   background: transparent;
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--purple-soft);
+  border: 1px solid rgba(212, 165, 255, 0.25);
 }
 
 .ib-btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(168, 85, 247, 0.06);
+  border-color: var(--purple-soft);
 }
 
 /* --- About Grid & Timeline --- */
@@ -206,7 +222,7 @@
 .ib-timeline-item {
   position: relative;
   padding-left: 24px;
-  border-left: 2px solid rgba(6, 182, 212, 0.2);
+  border-left: 2px solid rgba(168, 85, 247, 0.25);
 }
 
 .ib-timeline-item::before {
@@ -217,14 +233,14 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #06b6d4;
-  box-shadow: 0 0 8px #06b6d4;
+  background: var(--purple-primary);
+  box-shadow: 0 0 8px var(--purple-primary);
 }
 
 .ib-timeline-period {
   font-size: 13px;
   font-weight: 500;
-  color: #06b6d4;
+  color: var(--purple-muted);
   margin-bottom: 4px;
 }
 
@@ -237,7 +253,8 @@
 
 .ib-timeline-detail {
   font-size: 14px;
-  color: #94a3b8;
+  color: var(--purple-light);
+  opacity: 0.85;
   margin-bottom: 8px;
 }
 
@@ -245,7 +262,7 @@
   display: inline-block;
   font-size: 12px;
   font-weight: 600;
-  color: #a855f7;
+  color: var(--purple-muted);
   background: rgba(168, 85, 247, 0.1);
   border: 1px solid rgba(168, 85, 247, 0.2);
   padding: 4px 10px;
@@ -253,9 +270,9 @@
 }
 
 .ib-badge-muted {
-  color: #64748b;
-  background: rgba(100, 116, 139, 0.08);
-  border-color: rgba(100, 116, 139, 0.15);
+  color: var(--purple-light);
+  background: rgba(212, 165, 255, 0.08);
+  border-color: rgba(212, 165, 255, 0.15);
 }
 
 /* --- Achievements / Involvement List --- */
@@ -286,17 +303,19 @@
 
 .ib-list-org {
   font-size: 14px;
-  color: #38bdf8;
+  color: var(--purple-soft);
 }
 
 .ib-list-period {
   font-size: 12px;
-  color: #64748b;
+  color: var(--purple-light);
+  opacity: 0.7;
 }
 
 .ib-list-details {
   font-size: 13.5px;
-  color: #cbd5e1;
+  color: var(--purple-light);
+  opacity: 0.85;
   margin-top: 4px;
   line-height: 1.5;
 }
@@ -312,7 +331,8 @@
 .ib-tab {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
-  color: #94a3b8;
+  color: var(--purple-light);
+  opacity: 0.7;
   padding: 10px 20px;
   border-radius: 999px;
   font-size: 14px;
@@ -324,13 +344,15 @@
 .ib-tab:hover {
   background: rgba(255, 255, 255, 0.08);
   color: #ffffff;
+  opacity: 1;
 }
 
 .ib-tab-active {
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
-  border-color: #06b6d4;
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+  border-color: var(--purple-primary);
   color: #ffffff;
-  box-shadow: 0 0 15px rgba(6, 182, 212, 0.15);
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
 }
 
 .ib-skill-groups {
@@ -351,7 +373,7 @@
 .ib-skill-chip {
   font-size: 13px;
   font-weight: 500;
-  color: #cbd5e1;
+  color: var(--purple-light);
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 6px 12px;
@@ -360,8 +382,8 @@
 }
 
 .ib-skill-chip:hover {
-  border-color: #06b6d4;
-  background: rgba(6, 182, 212, 0.08);
+  border-color: var(--purple-soft);
+  background: rgba(212, 165, 255, 0.08);
   color: #ffffff;
   transform: translateY(-1px);
 }
@@ -457,14 +479,14 @@
 
 .ib-link {
   font-size: 15px;
-  color: #06b6d4;
+  color: var(--purple-soft);
   text-decoration: none;
   transition: color 0.2s ease;
   word-break: break-all;
 }
 
 .ib-link:hover {
-  color: #38bdf8;
+  color: var(--purple-muted);
   text-decoration: underline;
 }
 
@@ -491,8 +513,8 @@
 }
 
 .ib-social:hover {
-  background: rgba(6, 182, 212, 0.06);
-  border-color: rgba(6, 182, 212, 0.2);
+  background: rgba(168, 85, 247, 0.06);
+  border-color: rgba(168, 85, 247, 0.2);
   transform: translateX(4px);
 }
 
@@ -502,7 +524,7 @@
 }
 
 .ib-social-handle {
-  color: #06b6d4;
+  color: var(--purple-muted);
   font-size: 13.5px;
 }
 
@@ -538,8 +560,8 @@
 
 .ib-input:focus {
   outline: none;
-  border-color: #06b6d4;
-  box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+  border-color: var(--purple-soft);
+  box-shadow: 0 0 10px rgba(212, 165, 255, 0.2);
 }
 
 .ib-textarea {
@@ -652,7 +674,7 @@
   content: '✦';
   position: absolute;
   left: 0;
-  color: #06b6d4;
+  color: var(--purple-primary);
 }
 
 /* --- Keyframe Animations --- */
@@ -831,7 +853,7 @@
 .ib-project-card-link {
   font-size: 14px;
   font-weight: 700;
-  color: #06b6d4;
+  color: var(--purple-soft);
   display: inline-flex;
   align-items: center;
   gap: 6px;
