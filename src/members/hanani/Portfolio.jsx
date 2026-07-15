@@ -5,8 +5,6 @@ import Projects from './Projects.jsx'
 import Contact from './Contact.jsx'
 import './portfolio.css'
 
-// A handful of small bubbles that drift upward behind the content —
-// purely decorative, aria-hidden, no pointer events.
 const BUBBLES = [
   { left: '6%', size: 10, delay: '0s', duration: '11s' },
   { left: '16%', size: 6, delay: '2.5s', duration: '9s' },

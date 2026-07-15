@@ -9,7 +9,6 @@ import './scene.css'
 const EMERALD = '#10b981'
 const ROSE = '#f472b6'
 
-// Built in code rather than loaded from a file, so the scene has no image dependency.
 function useGridTexture() {
   return useMemo(() => {
     const size = 256

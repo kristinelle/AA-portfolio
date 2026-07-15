@@ -3,13 +3,10 @@ import { Canvas, useFrame } from '@react-three/fiber'
 
 const COLORS = ['#38bdf8', '#2dd4bf', '#5eead4', '#f472b6', '#22d3ee']
 
-// A simple low-poly fish: a cone for the body, a flattened cone for the
-// tail. Cheap to render several of at once.
+
 function Fish({ seed }) {
   const group = useRef()
 
-  // Each fish gets its own lazy swimming loop: an elliptical path with a
-  // random size, speed, depth and phase offset, plus a little vertical bob.
   const cfg = useMemo(() => {
     const rand = (min, max) => min + Math.random() * (max - min)
     return {
@@ -35,13 +32,12 @@ function Fish({ seed }) {
 
     group.current.position.set(x, y, z)
 
-    // Face the direction of travel.
+
     const nextT = t + 0.05
     const nx = Math.cos(nextT) * cfg.radiusX
     const nz = Math.sin(nextT) * cfg.radiusZ
     group.current.rotation.y = Math.atan2(nx - x, nz - z)
 
-    // Small tail wag.
     group.current.children[1].rotation.y = Math.sin(state.clock.elapsedTime * 6 + cfg.phase) * 0.5
   })
 
@@ -59,8 +55,6 @@ function Fish({ seed }) {
   )
 }
 
-// Slow rising bubbles in the background, echoing the ones behind the rest
-// of the section.
 function Bubbles() {
   const points = useRef()
   const positions = useMemo(() => {
