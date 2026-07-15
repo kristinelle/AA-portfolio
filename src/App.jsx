@@ -8,6 +8,7 @@ import { teamMembers } from './data/site.js'
 import Portfolio from './members/abbenisha ann/Portfolio.jsx'
 import IzzatyPortfolio from './members/izzaty/Portfolio.jsx'
 import HananiPortfolio from './members/hanani/Portfolio.jsx'
+import KristinePortfolio from './members/kristine elle/Portfolio.jsx'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/abbenisha" element={<Portfolio />} />
         <Route path="/izzaty" element={<IzzatyPortfolio />} />
         <Route path="/hanani" element={<HananiPortfolio />} />
+        <Route path="/kristine" element={<KristinePortfolio />} />
 
         {/* Every other member keeps a working route. Each one swaps this for
             their own <Route> when their portfolio is ready. */}

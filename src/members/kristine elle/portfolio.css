@@ -1,0 +1,498 @@
+/* Scoped styles for Kristine's Portfolio */
+.ke-space-bg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.portfolio-kristine {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  padding: 64px 24px 96px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.portfolio-kristine section {
+  margin-bottom: 88px;
+}
+
+/* Entrance animation keyframes (used by hero + reveal-on-scroll + skill tab switch) */
+@keyframes ke-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll-triggered reveal (paired with the Reveal.jsx wrapper) */
+.portfolio-kristine .ke-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-kristine .ke-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Heading with elegant bottom bar */
+.portfolio-kristine .ke-heading {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 28px;
+  font-size: clamp(24px, 3.5vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.portfolio-kristine .ke-heading-line {
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--rose) 0%, var(--pink) 100%);
+  border-radius: 2px;
+}
+
+/* Hero Section */
+.portfolio-kristine .ke-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 48px;
+  margin-bottom: 64px;
+}
+
+.portfolio-kristine .ke-hero .ke-role {
+  text-align: center;
+  color: var(--rose);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  animation: ke-fade-up 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.2s;
+}
+
+.portfolio-kristine .ke-hero h1 {
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(120deg, #ffffff 0%, var(--pink) 60%, var(--rose) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: ke-fade-up 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.2s;
+}
+
+.portfolio-kristine .ke-tagline {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--text);
+  animation: ke-fade-up 0.7s cubic-bezier(0.4, 0, 0.2, 1) both;
+  animation-delay: 0.2s;
+}
+
+/* Cards & Grid Layouts */
+.portfolio-kristine .ke-card {
+  background: var(--glass);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-kristine .ke-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(244, 114, 182, 0.25);
+  box-shadow: 0 14px 32px -14px rgba(244, 114, 182, 0.28);
+}
+
+.portfolio-kristine .ke-card h3 {
+  margin: 0 0 16px;
+  font-size: 18px;
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.portfolio-kristine .ke-card p,
+.portfolio-kristine .ke-card li {
+  color: var(--text);
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+.portfolio-kristine .ke-about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.portfolio-kristine .ke-grid-sec {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+@media (max-width: 768px) {
+  .portfolio-kristine .ke-about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Education items */
+.portfolio-kristine .ke-edu-item {
+  margin-bottom: 20px;
+}
+
+.portfolio-kristine .ke-edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-kristine .ke-edu-detail {
+  font-size: 14.5px;
+  color: var(--text);
+  margin-top: 4px;
+}
+
+.portfolio-kristine .ke-edu-note {
+  font-size: 13.5px;
+  color: var(--rose);
+  margin-top: 2px;
+}
+
+/* Achievements — timeline style, matching Honours & Awards */
+.portfolio-kristine .ke-achieve-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-kristine .ke-achieve-card li {
+  position: relative;
+  padding: 0 0 16px 26px;
+  border-left: 1px solid var(--border);
+  margin-left: 5px;
+  font-weight: 600;
+}
+
+.portfolio-kristine .ke-achieve-card li:first-child {
+  padding-top: 2px;
+}
+
+.portfolio-kristine .ke-achieve-card li:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.portfolio-kristine .ke-achieve-card li::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 3px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--rose);
+  box-shadow: 0 0 0 4px rgba(244, 114, 182, 0.16);
+}
+
+/* Leadership items — timeline style, matching Honours & Awards */
+.portfolio-kristine .ke-leader-item {
+  position: relative;
+  padding: 0 0 20px 26px;
+  border-left: 1px solid var(--border);
+  margin-left: 5px;
+  margin-bottom: 0;
+}
+
+.portfolio-kristine .ke-leader-item:first-child {
+  padding-top: 2px;
+}
+
+.portfolio-kristine .ke-leader-item:last-child {
+  border-left-color: transparent;
+  padding-bottom: 0;
+}
+
+.portfolio-kristine .ke-leader-item::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: 3px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--rose);
+  box-shadow: 0 0 0 4px rgba(244, 114, 182, 0.16);
+}
+
+.portfolio-kristine .ke-leader-item>*:first-child {
+  font-weight: 700;
+  color: var(--text-h);
+  font-size: 15px;
+}
+
+.portfolio-kristine .ke-leader-item p {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.portfolio-kristine .ke-leader-detail-open {
+  animation: ke-fade-up 0.3s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Looking Ahead Card */
+.portfolio-kristine .ke-future-card {
+  margin-top: 24px;
+}
+
+/* Show-more collapsible sections (Achievements / Leadership) */
+.portfolio-kristine .ke-collapsible {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin: 0;
+  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.portfolio-kristine .ke-collapsible-open {
+  max-height: 600px;
+  opacity: 1;
+  margin-top: 12px;
+}
+
+.portfolio-kristine .ke-show-more-btn {
+  background: none;
+  border: none;
+  color: var(--rose);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px 0 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.portfolio-kristine .ke-show-more-btn:hover {
+  color: var(--pink);
+  gap: 6px;
+}
+
+.portfolio-kristine .ke-show-more-icon {
+  display: inline-block;
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-kristine .ke-show-more-icon-open {
+  transform: rotate(180deg);
+}
+
+/* Skills Section */
+.portfolio-kristine .ke-skills-sub {
+  font-size: 16px;
+  color: var(--text);
+  margin: -16px 0 28px;
+}
+
+.portfolio-kristine .ke-tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.portfolio-kristine .ke-tab {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 18px;
+  border-radius: 99px;
+  cursor: pointer;
+  font-size: 14.5px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.portfolio-kristine .ke-tab:hover {
+  border-color: rgba(244, 114, 182, 0.4);
+  color: var(--text-h);
+  transform: translateY(-1px);
+}
+
+.portfolio-kristine .ke-tab-active {
+  background: linear-gradient(135deg, var(--rose) 0%, var(--pink) 100%);
+  border-color: transparent;
+  color: #000000;
+  font-weight: 600;
+}
+
+.portfolio-kristine .ke-skill-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  /* replays each time Skills.jsx remounts this element via key={activeCategory} */
+  animation: ke-fade-up 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.portfolio-kristine .ke-skill-card h4 {
+  margin: 0 0 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.portfolio-kristine .ke-chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-kristine .ke-skill-chip {
+  background: rgba(244, 114, 182, 0.08);
+  border: 1px solid rgba(244, 114, 182, 0.2);
+  color: var(--pink);
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  transition: all 0.2s ease;
+}
+
+.portfolio-kristine .ke-skill-chip:hover {
+  background: rgba(244, 114, 182, 0.15);
+  border-color: rgba(244, 114, 182, 0.45);
+  transform: translateY(-1px);
+}
+
+/* Projects Section (handled via 3D Carousel canvas) */
+.project-carousel-wrapper {
+  margin-top: 10px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Contact Section */
+.portfolio-kristine .ke-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-kristine .ke-contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.portfolio-kristine .ke-contact-card {
+  height: fit-content;
+}
+
+.portfolio-kristine .ke-social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.portfolio-kristine .ke-social-btn {
+  flex: 1;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 12px;
+  border-radius: var(--radius);
+  text-align: center;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.portfolio-kristine .ke-social-btn:hover {
+  border-color: rgba(244, 114, 182, 0.4);
+  color: var(--pink);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -10px rgba(244, 114, 182, 0.32);
+}
+
+/* Form Styles */
+.portfolio-kristine .ke-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.portfolio-kristine .ke-form input,
+.portfolio-kristine .ke-form textarea {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  color: var(--text-h);
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-kristine .ke-form input:focus,
+.portfolio-kristine .ke-form textarea:focus {
+  border-color: var(--rose);
+  box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.12);
+}
+
+.portfolio-kristine .ke-submit-btn {
+  background: linear-gradient(135deg, var(--rose) 0%, var(--pink) 100%);
+  border: none;
+  border-radius: var(--radius);
+  padding: 14px;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 15px;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio-kristine .ke-submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px -10px rgba(244, 114, 182, 0.45);
+}
+
+.portfolio-kristine .ke-form-status {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: var(--emerald-light);
+  padding: 12px;
+  border-radius: var(--radius);
+  text-align: center;
+  font-size: 14.5px;
+  animation: ke-fade-up 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Respect users who've asked for less motion */
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-kristine * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -24,13 +24,13 @@ export const teamMembers = [
   },
   {
     id: 'kristine',
-    name: 'Kristine Elle',
+    name: 'Kristine Elle Benjamin',
     role: 'UI/UX Designer',
     programme: 'Graphics & Multimedia Software',
-    shortDescription: 'Portfolio coming soon.',
+    shortDescription: 'Lead UI/UX Designer crafting the collective visual identity and immersive modern interfaces.',
     route: '/kristine',
     photo: 'kristine.jpg',
-    ready: false,
+    ready: true,
   },
   {
     id: 'hanani',
