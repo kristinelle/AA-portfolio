@@ -1,8 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { ProjectImage, ProjectVideo } from './Media.jsx'
 
-/* A bullet section that always shows its heading. Sections the author has not
-   documented yet show a short note instead of the bullets. */
+// Bullet section with fallback text
 function BulletSection({ title, items }) {
   return (
     <>
@@ -32,7 +31,7 @@ export default function ProjectModal({ project, onClose }) {
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
 
-    // Move focus into the dialog so keyboard users land inside it, not behind it.
+    // Focus close button for accessibility
     closeButton.current?.focus()
 
     return () => {

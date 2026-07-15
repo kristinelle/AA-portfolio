@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom'
 import { getTeamPhoto, getInitials } from '../assets/team/teamPhotos.js'
 
-/* One member card in the About Us section.
-   The whole card is a single Link, so clicking anywhere on it navigates and it
-   is reachable by keyboard with one Tab stop. */
 export default function TeamCard({ member, index }) {
-  const photo = getTeamPhoto(member.photo)
+  const photo = typeof member.photo === 'string' && (member.photo.startsWith('/') || member.photo.startsWith('data:') || member.photo.startsWith('http'))
+    ? member.photo
+    : getTeamPhoto(member.photo)
 
   return (
     <Link

@@ -1,7 +1,4 @@
-/* Global theme.
-   Deep charcoal base, emerald primary, blush pink accent.
-   The variable names are kept from the original theme so every existing
-   stylesheet re-themes without being rewritten. */
+
 
 :root {
   /* Palette */

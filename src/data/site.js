@@ -1,14 +1,5 @@
-// Group-wide content for the landing page, navbar and routes.
-//
-// `teamMembers` is the single source of truth for the team. Adding or editing a
-// member here updates the About Us cards, the navbar links and the routes at
-// once — no component needs to change.
-//
-// Each member edits ONLY their own entry:
-//   name, role, programme, shortDescription  -> their card
-//   photo                                    -> src/assets/team/<file>
-//   ready: true                              -> once their Portfolio page is
-//                                               wired into src/App.jsx
+import izzatyImage from '../assets/team/izzaty.png'
+
 export const site = {
   groupName: 'MuskeFour',
   portfolioTitle: 'Interactive 3D Portfolio',
@@ -28,38 +19,40 @@ export const teamMembers = [
     programme: 'Bachelor of Computer Science (Graphics & Multimedia Software)',
     shortDescription:
       'Passionate about interactive multimedia, AI, virtual reality and immersive user experiences.',
-    route: '/abbenisha',
+    route: '/member/abbenisha',
     photo: 'abbenisha.jpg',
     ready: true,
   },
   {
     id: 'kristine',
-    name: 'Kristine Elle',
+    name: 'Kristine Elle Benjamin',
     role: 'UI/UX Designer',
-    programme: 'Graphics & Multimedia Software',
-    shortDescription: 'Portfolio coming soon.',
-    route: '/kristine',
+    programme: 'Bachelor of Computer Science (Graphics & Multimedia Software)',
+    shortDescription: 'Passionate about designing and creating interactive UI/UX and modern interfaces with a hint of immersion.',
+    route: '/member/kristine',
     photo: 'kristine.jpg',
-    ready: false,
+    ready: true,
   },
   {
     id: 'hanani',
-    name: 'Hanani',
-    role: 'Multimedia & Contact',
-    programme: 'Graphics & Multimedia Software',
-    shortDescription: 'Portfolio coming soon.',
-    route: '/hanani',
+    name: 'Nur Hanani Binti Ahmad',
+    role: 'VR & AI Integration',
+    programme: 'Bachelor of Computer Science (Graphics & Multimedia Software)',
+    shortDescription:
+      'Passionate about VR/AR development and AI-integrated tools, building accessible, ' +
+      'user-centered digital experiences.',
+    route: '/member/hanani',
     photo: 'hanani.jpg',
-    ready: false,
+    ready: true,
   },
   {
     id: 'izzaty',
-    name: 'Izzaty',
+    name: 'Izzaty Balqis Binti Suhaimi',
     role: 'Animation & Effects',
-    programme: 'Graphics & Multimedia Software',
-    shortDescription: 'Portfolio coming soon.',
-    route: '/izzaty',
-    photo: 'izzaty.jpg',
-    ready: false,
+    programme: 'Bachelor of Computer Science (Graphic and Multimedia Software)',
+    shortDescription: 'Bringing data to life through motion and immersive 3D experiences. Passionate about interactive storytelling and visual effects.',
+    route: '/member/izzaty',
+    photo: izzatyImage,
+    ready: true,
   },
 ]

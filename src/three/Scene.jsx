@@ -4,16 +4,7 @@ import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import './scene.css'
 
-/* Main Three.js scene.
 
-   3D objects : torus knot, icosahedron, octahedron, dodecahedron, textured cube
-   Animations : continuous self-rotation, and a sinusoidal float
-   Lighting   : ambient fill, directional key light with shadows, pulsing point
-                light, and a rose rim light
-   Texture    : procedural canvas texture on the cube
-   Mouse      : hover to highlight, click to spin up, drag to orbit, scroll to zoom
-   Keyboard   : arrow keys steer the rig, Space pauses or resumes
-   Camera     : OrbitControls with damping */
 
 const EMERALD = '#10b981'
 const ROSE = '#f472b6'
