@@ -35,13 +35,15 @@ export const teamMembers = [
   },
   {
     id: 'hanani',
-    name: 'Hanani',
-    role: 'Multimedia & Contact',
-    programme: 'Graphics & Multimedia Software',
-    shortDescription: 'Portfolio coming soon.',
+    name: 'Nur Hanani Binti Ahmad',
+    role: 'VR & AI Integration',
+    programme: 'Bachelor of Computer Science (Graphics & Multimedia Software)',
+    shortDescription:
+      'Passionate about VR/AR development and AI-integrated tools, building accessible, ' +
+      'user-centered digital experiences.',
     route: '/member/hanani',
     photo: 'hanani.jpg',
-    ready: false,
+    ready: true,
   },
   {
     id: 'izzaty',

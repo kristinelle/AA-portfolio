@@ -30,7 +30,7 @@ export const profile = {
   ],
   leadership: [
     {
-      role: 'Secretary for for EXPEDEA \'26, BOXTROLLS \'26, and AGM\'25,  Computer Graphics & Multimedia Association (CGMA)',
+      role: 'Secretary for EXPEDEA \'26, BOXTROLLS \'26, and AGM\'25,  Computer Graphics & Multimedia Association (CGMA)',
       detail:
         'Handled official documentation, meeting minutes, formal correspondence, and university compliance reporting.',
     },
