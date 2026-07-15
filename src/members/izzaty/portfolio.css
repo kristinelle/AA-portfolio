@@ -6,7 +6,7 @@
   --purple-soft: #D4A5FF;
   --purple-primary: #A855F7;
   --purple-dark: #7C3AED;
-  --bg-dark: #0b1120;
+  --bg-dark: #0a0e27;
 
   text-align: left;
   padding: 0 24px 120px;
@@ -18,7 +18,7 @@
 
 body:has(.ib-portfolio),
 body:has(.ib-portfolio) #root {
-  background: #0b1120 !important;
+  background: #0a0e27 !important;
   background-image: none !important;
 }
 

@@ -147,34 +147,38 @@ export const projects = [
     ]
   },
   {
-    id: 'image-editing-tools',
-    title: 'Unified Image Editing Tools',
-    shortDescription: 'A desktop/web image enhancement application featuring noise reduction and controls.',
-    overview: [
-      'Created an image enhancement application with accessible editing tools.',
-      'Implemented noise reduction, brightness/contrast adjustment, sharpening, cropping, and opacity control.',
-      'Designed a modern, intuitive interface and improved visual clarity and usability.',
-    ],
+    id: 'aurora-museum',
+    title: 'Aurora Museum of Science & History',
+    shortDescription: 'A multiplayer metaverse museum with AI-powered tour guide, real-time Firebase cloud sync, and Octree spatial optimization. Built in Unity with Photon networking and Claude AI integration.',
+    hoverDescription: 'A multiplayer metaverse museum with AI tour guide, real-time cloud sync, and Octree optimization.',
+    demo: 'https://drive.google.com/file/d/1fLwtT30GillCqfZ_y-9vOFQyNf9Ap0Du/view?usp=sharing',
+    drive: 'https://drive.google.com/drive/folders/1BRCphZngSPdiAn3G3mVaB1w4ThEyWbVu',
+    longDescription: 'Aurora Museum of Science & History is a first-person desktop metaverse where visitors explore a 4×4 grid of gallery rooms and interact with themed exhibits. Built on SENEM, the classroom subsystem was removed and replaced with an original walled-gallery museum, a custom spatial-optimization system, a Firebase cloud backend, and an AI tour guide. The application features over 3,000 static props, interactive raycast-based exhibit interaction, and seamless cloud persistence using Firebase Realtime Database. An AI docent powered by Claude Messages API answers visitor questions with context-aware responses based on the current exhibit being viewed. The Octree occlusion culling system reduces rendered objects by an average of 83.2%. Multiplayer support via Photon allows up to 5 users to explore the museum together with synchronized movement and voice chat.',
     features: [
-      'Noise reduction algorithms and sharpening filters',
-      'Real-time brightness, contrast, and opacity controls',
-      'Cropping and basic canvas transformation tools',
-      'High-fidelity UI mockups and prototypes',
+      'Custom Virtual Environment: 4×4 grid of walled galleries with 3,142 renderers and 5 interactive exhibits',
+      'Camera-Centre Raycasting: Decoupled ExhibitInteractable and ExhibitRaycaster scripts for precise interaction',
+      'Fair Avatar Spawning: Radial ring spawn keyed to Photon ActorNumber',
+      'Firebase Database: REST + SSE with master-authoritative visitor count and ETag compare-and-swap for favourites',
+      'AI Tour Guide: Claude Messages API with world-state injection and offline fallback',
+      'Octree Spatial Optimization: 201 nodes, 176 leaves, 83.2% average reduction in rendered objects'
     ],
-    technologies: ['Python', 'Pandas', 'NumPy', 'Figma', 'Git'],
-    contributions: [
-      'Researched and implemented matrix-based image filtering using NumPy.',
-      'Designed a clean, modern user interface prototype in Figma.',
-      'Optimized image calculation pipelines to run efficiently.',
+    technologies: ['Unity 2022.3.20f1', 'C#', 'Firebase', 'Photon', 'Claude AI', 'Octree'],
+    performanceMetrics: [
+      { pose: 'Entrance, look across galleries', off: '2,444', on: '324', culled: '2,120', reduction: '86.7%' },
+      { pose: 'Mid room, look down a row', off: '1,156', on: '188', culled: '968', reduction: '83.7%' },
+      { pose: 'Corner, face a wall', off: '52', on: '52', culled: '0', reduction: '0.0%' },
+      { pose: 'Centre, look into a corner', off: '882', on: '197', culled: '685', reduction: '77.7%' },
+      { pose: 'AVERAGE', off: '1,133', on: '190', culled: '943', reduction: '83.2%' }
     ],
-    challenges: [
-      'Improving processing speed for large resolution images using matrix transformations.',
-      'Balancing UI ease-of-use with advanced image adjustment controls.',
-    ],
-    lessons: [
-      'Learned the mathematical foundations of image convolutions and noise reduction filters.',
-      'Gained skills in UI layout prototypes and user experience design paradigms.',
-    ],
+    controls: [
+      { key: 'WASD / mouse', action: 'Move / look (first person)' },
+      { key: 'E', action: 'Interact with / favourite exhibit' },
+      { key: 'O', action: 'Toggle Octree optimization ON/OFF' },
+      { key: 'P', action: 'Start / stop benchmark dolly (CSV)' },
+      { key: 'F3', action: 'Toggle benchmark HUD' },
+      { key: 'F4', action: 'Toggle Firebase live overlay' },
+      { key: 'Tab / Enter', action: 'Push-to-talk (Voice) / text chat' }
+    ]
   },
 ]
 
