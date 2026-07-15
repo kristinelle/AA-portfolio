@@ -1,49 +1,39 @@
-import { useState } from 'react'
-import { skillGroups } from './data.js'
+import './portfolio.css'
 
-const ALL = 'All'
+// Skills lists separated into marquee rows for alternating scrolls
+const row0 = ['Java', 'C++', 'Python', 'JavaScript', 'PHP', 'HTML', 'CSS']
+const row1 = ['MySQL', 'Node.js', 'Pandas', 'NumPy']
+const row2 = ['Figma', 'Unity', 'Google Colab', 'Git', 'GitHub']
+
+function MarqueeRow({ items, direction }) {
+  // Multiply items list to guarantee seamless overflow loop across screens
+  const doubledItems = [...items, ...items, ...items, ...items]
+
+  return (
+    <div className="ib-marquee-row">
+      <div className={`ib-marquee-inner ${direction === 'left' ? 'scroll-left' : 'scroll-right'}`}>
+        <div className="ib-marquee-group">
+          {doubledItems.map((skill, idx) => (
+            <span key={idx} className="ib-skill-chip" style={{ fontSize: '15px', padding: '8px 18px' }}>
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function Skills() {
-  const [activeCategory, setActiveCategory] = useState(ALL)
-
-  const categories = [ALL, ...skillGroups.map((group) => group.category)]
-  const visibleGroups =
-    activeCategory === ALL
-      ? skillGroups
-      : skillGroups.filter((group) => group.category === activeCategory)
-
   return (
     <section id="skills" className="ib-section">
       <h2 className="ib-section-title">Technical Skills</h2>
-      <p className="ib-section-sub">Select a category to filter my skillset.</p>
+      <p className="ib-section-sub">An interactive scroll of tools, platforms, and languages.</p>
 
-      <div className="ib-tabs" role="tablist" aria-label="Skill categories">
-        {categories.map((category) => (
-          <button
-            key={category}
-            role="tab"
-            aria-selected={activeCategory === category}
-            className={`ib-tab ${activeCategory === category ? 'ib-tab-active' : ''}`}
-            onClick={() => setActiveCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-
-      <div className="ib-skill-groups">
-        {visibleGroups.map((group) => (
-          <div key={group.category} className="ib-panel">
-            <h4 className="ib-panel-title">{group.category}</h4>
-            <ul className="ib-chip-list">
-              {group.skills.map((skill) => (
-                <li key={skill} className="ib-skill-chip">
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+      <div className="ib-panel ib-marquee-container">
+        <MarqueeRow items={row0} direction="right" />
+        <MarqueeRow items={row1} direction="left" />
+        <MarqueeRow items={row2} direction="right" />
       </div>
     </section>
   )

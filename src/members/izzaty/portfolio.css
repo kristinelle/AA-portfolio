@@ -665,3 +665,177 @@
   from { transform: scale(0.95); opacity: 0; }
   to { transform: scale(1); opacity: 1; }
 }
+
+.ib-bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* --- Infinite Marquee Skills --- */
+.ib-marquee-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.ib-marquee-row {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+.ib-marquee-inner {
+  display: flex;
+  gap: 16px;
+  white-space: nowrap;
+  width: max-content;
+}
+
+.ib-marquee-inner.scroll-left {
+  animation: ib-scroll-left 25s linear infinite;
+}
+
+.ib-marquee-inner.scroll-right {
+  animation: ib-scroll-right 25s linear infinite;
+}
+
+.ib-marquee-group {
+  display: flex;
+  gap: 16px;
+}
+
+@keyframes ib-scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes ib-scroll-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* --- Project Cards with Slide-up Hover Previews --- */
+.ib-project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.ib-project-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ib-project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 15px 35px rgba(6, 182, 212, 0.15);
+}
+
+.ib-project-card-header {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.ib-project-card-number {
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 2px;
+  border-bottom: 2px solid rgba(6, 182, 212, 0.2);
+  padding-bottom: 4px;
+}
+
+.ib-project-card-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 16px;
+  z-index: 5;
+}
+
+.ib-project-card-title {
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 850;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.ib-project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.ib-project-card-tag {
+  font-size: 12px;
+  font-weight: 600;
+  color: #a855f7;
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* Slide-up overlay */
+.ib-project-card-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 32px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+}
+
+.ib-project-card:hover .ib-project-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ib-project-card-desc {
+  font-size: 14.5px;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ib-project-card-link {
+  font-size: 14px;
+  font-weight: 700;
+  color: #06b6d4;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
+

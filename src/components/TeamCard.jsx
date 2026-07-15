@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom'
 import { getTeamPhoto, getInitials } from '../assets/team/teamPhotos.js'
 
 export default function TeamCard({ member, index }) {
-  const photo = getTeamPhoto(member.photo)
+  const photo = typeof member.photo === 'string' && (member.photo.startsWith('/') || member.photo.startsWith('data:') || member.photo.startsWith('http'))
+    ? member.photo
+    : getTeamPhoto(member.photo)
 
   return (
     <Link

@@ -83,63 +83,68 @@ export const skillGroups = [
 export const projects = [
   {
     id: 'utm-tvas',
-    title: 'Timetable Visualization Analysis System (UTM-TVAS)',
-    shortDescription: 'A web-based platform for timetable visualization and academic schedule management.',
+    title: 'UTM Timetable Visualization and Analysis System (UTM-TVAS)',
+    shortDescription: 'A web-based academic scheduling system that transforms raw timetable data into interactive visualizations, including color-coded session blocks, charts, and clash detection. Built as a Single Page Application (SPA) with real-time updates and role-based access for students and lecturers.',
+    role: 'UI/UX Design (Figma prototype) & Front-End Development',
+    figmaLink: 'https://www.figma.com/design/hulHAHm6obP1POQ53zLFRh/UTM-Timetable-Visual-and-Analysis-System?node-id=0-1&t=mzCO3JymbDT2mrQK-1',
+    demoLink: 'https://izzatybalqis.github.io/UTM-TIMETABLE-VISUALIZATION-AND-ANALYSIS-SYSTEM-UTM-TVAS-',
     overview: [
       'Developed a fully functional web-based platform for timetable visualization and academic schedule management.',
-      'Built data-driven visualizations and implemented interactive search and filtering.',
-      'Delivered a responsive, user-friendly website interface accessible to students, lecturers, and administrators.',
+      'Transformed complex, multi-dimensional calendar and schedule databases into clear, legible, and interactive dashboards.',
+      'Supported administrative clash analysis and scheduling coordination tools under a unified Single Page Application.'
     ],
     features: [
-      'Interactive search and filtering by courses, lecturers, and venues',
-      'Dynamic timetable schedule visualizations',
-      'Role-based features for students, lecturers, and admins',
-      'Responsive, modern user interface design',
+      'Interactive timetable visualization with color-coded blocks',
+      'Clash detection with bar charts and pie charts',
+      'Room utilization analysis and available study space finder',
+      'Timetable heatmap and day-by-day analysis',
+      'Role-based access (Student / Lecturer) with different dashboards'
     ],
-    technologies: ['HTML', 'JavaScript', 'Node.js', 'CSS', 'Git', 'GitHub'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Node.js'],
     contributions: [
-      'Designed and developed the front-end interface using modern web layout paradigms.',
-      'Implemented interactive schedule filtering logic in JavaScript.',
-      'Assisted in setting up the Node.js back-end to serve visualization data.',
+      'Designed high-fidelity mockups and interaction flows in Figma.',
+      'Developed core frontend UI layout including responsive visualization grids.',
+      'Implemented real-time filtering and schedule clash-rendering logics in JavaScript.'
     ],
     challenges: [
       'Representing dense multi-dimensional schedule data cleanly on mobile screen sizes.',
-      'Minimizing query latency during complex filtering of academic databases.',
+      'Minimizing query latency during complex filtering of academic databases.'
     ],
     lessons: [
       'Learned best practices for visual schedule representations and accessibility.',
-      'Gained deep experience in handling dynamic state and user queries in pure JavaScript.',
-    ],
+      'Gained deep experience in handling dynamic state and user queries in pure JavaScript.'
+    ]
   },
   {
-    id: 'task-managing-system',
-    title: 'Academic Task Managing System',
-    shortDescription: 'A relational web database application managing tasks for students, lecturers, and coordinators.',
+    id: 'emomaze',
+    title: 'EMOmaze Room',
+    shortDescription: 'A real-time facial-expression-controlled 3D maze navigation game built in Unity. Players steer an avatar using only facial expressions (Happy, Sad, Angry, Surprise) captured via webcam.',
     overview: [
-      'Built a web-based task management system to manage academic tasks for students, lecturers, and coordinators.',
-      'Designed a relational database with ERD and SQL schema to support task workflows and reporting.',
-      'Delivered a user-friendly dashboard with search filters, progress indicators, and secure login/password reset.',
+      'EMOmaze Room is an interactive 3D navigation game developed in Unity that leverages real-time facial expressions as the primary control mechanism.',
+      'Using a standard webcam, the system captures facial landmarks via MediaPipe and processes them through a custom blendshape-based classifier to steer the player character through maze challenges.'
     ],
     features: [
-      'Interactive student/lecturer/coordinator dashboards',
-      'Relational database integration tracking task workflows',
-      'Progress indicators, search filters, and task reporting tools',
-      'Secure login and password recovery',
+      'Webcam facial landmark detection via MediaPipe',
+      'Blendshape-based emotion scoring (Happy, Sad, Angry, Surprise)',
+      'CharacterController physics movement integration',
+      'Minimap HUD navigation and goal system',
+      'Occlusion Culling optimization (33% FPS improvement)',
+      'Mirror LAN multiplayer support'
     ],
-    technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Figma'],
+    technologies: ['Unity 2022.3.20f1', 'MediaPipe', 'Mirror Networking', 'C#', 'Blendshape Emotion Classifier'],
     contributions: [
-      'Designed the complete ERD and schema mappings for relational database structure.',
-      'Developed core PHP controller logics managing user sessions and progress updates.',
-      'Built custom responsive dashboard CSS from scratch.',
+      'Developed the blendshape emotion classifier pipeline mapping webcam landmarks to movement physics.',
+      'Configured Unity CharacterController physics and viewport minimap mechanics.',
+      'Implemented Occlusion Culling to enhance mobile and low-spec execution performance.'
     ],
     challenges: [
-      'Handling role-based authorization securely so students cannot access lecturer/coordinator controls.',
-      'Designing database queries to return aggregated task statistics for reporting.',
+      'Normalizing webcam calibration across varying light conditions and user facial structures.',
+      'Optimizing rendering throughput when loading dense labyrinth assets in Unity.'
     ],
     lessons: [
-      'Strengthened backend PHP skills and secure authentication workflow patterns.',
-      'Gained deep understanding of relational database normalization and SQL optimization.',
-    ],
+      'Mastered landmark feature mapping pipelines for custom input wrappers.',
+      'Gained deep experience profiling and tuning frame rendering budgets in Unity.'
+    ]
   },
   {
     id: 'image-editing-tools',

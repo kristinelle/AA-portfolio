@@ -1,3 +1,4 @@
+import izzatyImage from '../assets/team/izzaty.png'
 
 export const site = {
   groupName: 'MuskeFour',
@@ -18,7 +19,7 @@ export const teamMembers = [
     programme: 'Bachelor of Computer Science (Graphics & Multimedia Software)',
     shortDescription:
       'Passionate about interactive multimedia, AI, virtual reality and immersive user experiences.',
-    route: '/abbenisha',
+    route: '/member/abbenisha',
     photo: 'abbenisha.jpg',
     ready: true,
   },
@@ -26,9 +27,9 @@ export const teamMembers = [
     id: 'kristine',
     name: 'Kristine Elle Benjamin',
     role: 'UI/UX Designer',
-    programme: 'Graphics & Multimedia Software',
-    shortDescription: 'Lead UI/UX Designer crafting the collective visual identity and immersive modern interfaces.',
-    route: '/kristine',
+    programme: 'Bachelor of Computer Science (Graphics & Multimedia Software)',
+    shortDescription: 'Passionate about designing and creating interactive UI/UX and modern interfaces with a hint of immersion.',
+    route: '/member/kristine',
     photo: 'kristine.jpg',
     ready: true,
   },
@@ -38,19 +39,18 @@ export const teamMembers = [
     role: 'Multimedia & Contact',
     programme: 'Graphics & Multimedia Software',
     shortDescription: 'Portfolio coming soon.',
-    route: '/hanani',
+    route: '/member/hanani',
     photo: 'hanani.jpg',
     ready: false,
   },
   {
     id: 'izzaty',
     name: 'Izzaty Balqis Binti Suhaimi',
-    role: 'Graphics & Multimedia Developer',
-    programme: 'Bachelor of Computer Science (Graphic and Multimedia Software) with Honours',
-    shortDescription:
-      'Computer Science student at UTM specializing in Graphics & Multimedia Software, with a passion for web platform development, visualization tools, and 3D experiences.',
-    route: '/izzaty',
-    photo: 'izzaty.jpg',
+    role: 'Animation & Effects',
+    programme: 'Bachelor of Computer Science (Graphic and Multimedia Software)',
+    shortDescription: 'Bringing data to life through motion and immersive 3D experiences. Passionate about interactive storytelling and visual effects.',
+    route: '/member/izzaty',
+    photo: izzatyImage,
     ready: true,
   },
 ]
