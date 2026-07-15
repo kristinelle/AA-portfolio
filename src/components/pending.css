@@ -1,0 +1,25 @@
+.pending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+  padding: 140px 24px;
+  text-align: center;
+}
+
+.pending-title {
+  margin: 0;
+}
+
+.pending-role {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--emerald-light);
+}
+
+.pending-note {
+  margin-bottom: 28px;
+  color: var(--text);
+}
