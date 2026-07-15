@@ -1,8 +1,6 @@
 import { skills } from './data.js'
 import { Heading } from './About.jsx'
 
-// Simple flat-shaded sea-creature icons, cycled across the skill cards.
-// Each uses a radial gradient fill for a soft rounded "3D" feel.
 function ShellIcon({ id }) {
   return (
     <svg viewBox="0 0 60 60" className="hnn-skill-icon">

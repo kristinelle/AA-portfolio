@@ -3,8 +3,6 @@ import { createPortal } from 'react-dom'
 import { projects } from './data.js'
 import { Heading } from './About.jsx'
 
-// Position/rotation for each frame based on its distance from the active one —
-// this is what gives the "walking down a gallery corridor" feel.
 function frameStyle(offset) {
   const clamped = Math.max(-3, Math.min(3, offset))
   const rotateY = clamped * -26
@@ -20,8 +18,6 @@ function frameStyle(offset) {
   }
 }
 
-// Rendered via a portal straight onto <body> so it can never get trapped
-// behind a section's stacking context, no matter what else is on the page.
 function ProjectModal({ project, onClose }) {
   if (!project) return null
 
@@ -40,9 +36,6 @@ function ProjectModal({ project, onClose }) {
           <h3>{project.title}</h3>
           <div className="hnn-project-tag">{project.tagline}</div>
 
-          {/* Add .mp4 files to src/members/hanani/assets/demo/, import them at
-              the top of data.js, and set project.video to the import. For
-              YouTube instead, set videoType to 'youtube' and video to the ID. */}
           {project.video ? (
             project.videoType === 'youtube' ? (
               <div className="hnn-modal-video">
@@ -78,8 +71,6 @@ function ProjectModal({ project, onClose }) {
   )
 }
 
-// A little shark that swims across the gallery. Click it and it drags you
-// to a random project and opens it up.
 function GalleryShark({ onCatch }) {
   return (
     <button className="hnn-shark" onClick={onCatch} aria-label="Surprise me with a project">

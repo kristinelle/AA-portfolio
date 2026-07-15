@@ -1,0 +1,274 @@
+/* ── Scoped CSS variables ─────────────────────────────────────────────────── */
+.ibm-overlay {
+  --ibm-bg:           #0a0e27;
+  --ibm-panel-bg:     #0f1535;
+  --ibm-border:       rgba(168, 85, 247, 0.22);
+  --ibm-purple-soft:  #D4A5FF;
+  --ibm-purple-mid:   #C084FC;
+  --ibm-purple-muted: #A855F7;
+  --ibm-text:         #E9D5FF;
+  --ibm-text-dim:     #cbd5e1;
+
+  /* Overlay backdrop */
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 14, 39, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: ibm-fade-in 0.25s ease;
+}
+
+@keyframes ibm-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Content panel ────────────────────────────────────────────────────────── */
+.ibm-panel {
+  position: relative;
+  background: var(--ibm-panel-bg);
+  border: 1px solid var(--ibm-border);
+  border-radius: 18px;
+  padding: 40px 44px 48px;
+  max-width: 820px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow:
+    0 24px 64px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(168, 85, 247, 0.08) inset;
+  animation: ibm-slide-up 0.28s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(168, 85, 247, 0.35) transparent;
+}
+
+.ibm-panel::-webkit-scrollbar        { width: 4px; }
+.ibm-panel::-webkit-scrollbar-thumb  { background: rgba(168,85,247,0.35); border-radius: 4px; }
+.ibm-panel::-webkit-scrollbar-track  { background: transparent; }
+
+@keyframes ibm-slide-up {
+  from { transform: translateY(28px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ── Close button ─────────────────────────────────────────────────────────── */
+.ibm-close {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  background: none;
+  border: none;
+  color: var(--ibm-purple-mid);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: color 0.18s ease, transform 0.22s ease, background 0.18s ease;
+}
+.ibm-close:hover {
+  color: var(--ibm-purple-soft);
+  transform: rotate(90deg);
+  background: rgba(168, 85, 247, 0.1);
+}
+
+/* ── Header typography ────────────────────────────────────────────────────── */
+.ibm-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ibm-purple-muted);
+  margin-bottom: 10px;
+}
+
+.ibm-title {
+  font-size: clamp(1.55rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+  color: var(--ibm-purple-soft);
+  margin: 0 0 10px;
+  line-height: 1.2;
+}
+
+.ibm-subtitle {
+  font-size: 0.95rem;
+  color: var(--ibm-text-dim);
+  line-height: 1.65;
+  margin: 0 0 22px;
+}
+
+/* ── Tech chips ───────────────────────────────────────────────────────────── */
+.ibm-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.ibm-chip {
+  background: rgba(168, 85, 247, 0.14);
+  color: var(--ibm-purple-soft);
+  border: 1px solid rgba(168, 85, 247, 0.18);
+  border-radius: 20px;
+  padding: 4px 13px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+/* ── Content sections ─────────────────────────────────────────────────────── */
+.ibm-section {
+  margin-bottom: 28px;
+}
+.ibm-sub-heading {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ibm-purple-mid);
+  margin: 0 0 14px;
+}
+.ibm-body-text {
+  font-size: 0.94rem;
+  color: var(--ibm-text-dim);
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+/* ── Feature list (labelled items) ───────────────────────────────────────── */
+.ibm-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.ibm-feature-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ibm-feat-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ibm-purple-soft);
+}
+.ibm-feat-desc {
+  font-size: 0.88rem;
+  color: var(--ibm-text-dim);
+  line-height: 1.6;
+}
+
+/* ── Simple bullet list ───────────────────────────────────────────────────── */
+.ibm-bullet-list {
+  margin: 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--ibm-text-dim);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+/* ── Hero image & video ───────────────────────────────────────────────────── */
+.ibm-hero-img {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.ibm-hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ibm-video-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.ibm-video-wrap video {
+  width: 100%;
+  display: block;
+}
+
+/* ── Data tables ──────────────────────────────────────────────────────────── */
+.ibm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  color: var(--ibm-text-dim);
+  text-align: left;
+}
+.ibm-table th {
+  padding: 10px 8px;
+  color: var(--ibm-purple-soft);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.ibm-table td {
+  padding: 10px 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.ibm-row-highlight td {
+  font-weight: 700;
+  background: rgba(168, 85, 247, 0.08);
+}
+
+/* ── Link buttons ─────────────────────────────────────────────────────────── */
+.ibm-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+.ibm-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ibm-btn-primary {
+  background: var(--ibm-purple-muted);
+  color: #fff;
+  border: 1px solid transparent;
+}
+.ibm-btn-primary:hover {
+  background: #7C3AED;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.35);
+}
+.ibm-btn-ghost {
+  background: rgba(168, 85, 247, 0.1);
+  color: var(--ibm-purple-soft);
+  border: 1px solid var(--ibm-border);
+}
+.ibm-btn-ghost:hover {
+  background: rgba(168, 85, 247, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ───────────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .ibm-panel {
+    padding: 28px 20px 36px;
+  }
+  .ibm-title {
+    font-size: 1.4rem;
+  }
+}

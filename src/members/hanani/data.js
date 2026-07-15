@@ -1,9 +1,5 @@
 
-// Demo videos — place your .mp4 files in src/members/hanani/assets/demo/
-// using these exact filenames (or update the paths below to match yours).
-// Vite will bundle these automatically once the files exist; leaving a file
-// out is fine, its import just needs to be commented out or the project's
-// `video` field left as null.
+
 import signbridgeDemo from './assets/demo/signbridge.mp4'
 import gestureUiDemo from './assets/demo/gesture-ui.mp4'
 import vrWalkthroughDemo from './assets/demo/vr-walkthrough.mp4'

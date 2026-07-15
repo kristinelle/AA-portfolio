@@ -1,7 +1,6 @@
 import { profile } from './data.js'
 import FishSchoolCompanion from './FishSchoolCompanion.jsx'
 
-// Heading with custom underline
 function Heading({ children }) {
   return (
     <h2 className="hnn-heading">
@@ -13,9 +12,6 @@ function Heading({ children }) {
   )
 }
 
-// One entry on the timeline: a glowing dot, a connecting line down to the
-// next entry, a coloured period label, a title, description, and an
-// optional badge pill (e.g. a CGPA).
 function TimelineItem({ period, title, description, badge }) {
   return (
     <div className="hnn-timeline-item">
@@ -61,8 +57,6 @@ export default function About() {
           <TimelineBlock label="Leadership & Involvement" items={profile.leadership} />
         </div>
 
-        {/* A small school of fish keeps the timeline company as you scroll —
-            hidden on narrow screens where there's no room for it. */}
         <div className="hnn-timeline-companion" aria-hidden="true">
           <FishSchoolCompanion />
         </div>
