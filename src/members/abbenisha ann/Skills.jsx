@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { skillGroups } from './data.js'
+import Skills3D from './Skills3D.jsx'
 
 const ALL = 'All'
 
@@ -15,7 +16,9 @@ export default function Skills() {
   return (
     <section id="skills" className="aa-section">
       <h2 className="aa-section-title">Skills</h2>
-      <p className="aa-section-sub">Select a category to filter.</p>
+      <p className="aa-section-sub">Select a category to filter the 3D skill cloud.</p>
+
+      <Skills3D activeCategory={activeCategory} />
 
       <div className="aa-tabs" role="tablist" aria-label="Skill categories">
         {categories.map((category) => (
