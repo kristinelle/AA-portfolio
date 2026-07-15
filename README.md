@@ -1,16 +1,84 @@
-# React + Vite
+# Interactive 3D Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An Interactive 3D Portfolio Website developed using **React**, **Vite**, and **Three.js** for the SECV3263 Multimedia Web Programming course at Universiti Teknologi Malaysia.
 
-Currently, two official plugins are available:
+The website showcases the profiles, technical skills, projects, and achievements of each group member through an engaging multimedia experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Live Website
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://portfolio-website-muskefour.vercel.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- React
+- Vite
+- Three.js
+- React Three Fiber
+- React Router
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+
+---
+
+## Features
+
+- Interactive 3D landing page using Three.js
+- Responsive user interface
+- About Us section
+- Individual portfolio pages
+- Skills showcase
+- Interactive project gallery
+- Project detail modal
+- Multimedia integration (images and videos)
+- Contact section
+- Responsive design
+
+---
+
+## Team Members
+
+- Abbenisha Ann Michael Benedict
+- Kristine Elle Benjamin
+- Nur Hanani Binti Ahmad
+- Izzaty Balqis Binti Suhaimi
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Build the project:
+
+```bash
+npm run build
+```
+
+Preview the production build:
+
+```bash
+npm run preview
+```
+
+---
