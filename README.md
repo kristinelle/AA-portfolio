@@ -54,7 +54,7 @@ https://portfolio-website-muskefour.vercel.app/
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/kristinelle/AA-portfolio
 ```
 
 Install dependencies:
